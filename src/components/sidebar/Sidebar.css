@@ -1,0 +1,146 @@
+.sidebar-container {
+    width: 300px;
+    height: calc(100vh - 20px);
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    z-index: 2;
+    transition: .3s;
+}
+
+.sidebar {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #FFF, #F6F2EF);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    width: 100%;
+    height: 55px;
+}
+
+.sidebar-logo a {
+    height: 100%;
+    width: fit-content;
+}
+
+.sidebar-logo a img {
+    height: 100%;
+    width: auto;
+}
+
+.sidebar-divider {
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #FFF, #E0E1E2, #FFF);
+    margin: 30px 0;
+}
+
+.sidebar-links {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 110px;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-links li {
+    width: 100%;
+    height: 37px;
+    margin-bottom: 15px;
+}
+
+.sidebar-links li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #353231;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 4px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, #FF6A00, #FF8229D6, #FFFFFF00);
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: .3s;
+}
+
+.sidebar-link-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F2EF;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.sidebar-link-icon img {
+    max-height: 14px;
+    max-width: 14px;
+    transition: .3s;
+}
+
+.sidebar-links li a:not(.active).hover {
+    color: #FF6A00;
+}
+
+.sidebar-links li a.active {
+    color: #FFF;
+    background-size: 100%;
+}
+
+.sidebar-links li a.active .sidebar-link-icon {
+    background-color: #FFFFFF1A;
+}
+
+.sidebar-links li a.active .sidebar-link-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000078;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media (max-width: 1700px) {
+    .sidebar-container {
+        top: 0;
+        left: -300px;
+        background-image: linear-gradient(to bottom, #FFF, #F6F2EF);
+        height: 100vh;
+    }
+    .sidebar-container.active {
+        left: 0;
+    }
+    .sidebar {
+        background: none;
+    }
+}

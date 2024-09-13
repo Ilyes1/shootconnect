@@ -1,0 +1,209 @@
+.dashboard-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px 10px 10px;
+}
+
+.dashboard-header-left {
+    flex: 1;
+}
+
+.dashboard-header-left h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+
+.dashboard-header-left h2 span {
+    color: #FF6A00;
+}
+
+.dashboard-header-right {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 50px;
+}
+
+.dashboard-header-search {
+    height: 40px;
+    width: 360px;
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+
+.dashboard-header-search:hover {
+    border-color: #FF6A00;
+}
+
+.dashboard-header-search-icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-header-search-icon img {
+    max-width: 13px;
+    max-height: 13px;
+}
+
+.dashboard-header-search input {
+    height: 100%;
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.dashboard-header-search input::placeholder {
+    color: #646464;
+}
+
+.dashboard-header-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #FFF;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.dashboard-header-icon img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.dashboard-header-icon:hover {
+    opacity: .7;
+}
+
+.dashboard-header-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+.dashboard-header-profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dashboard-header-profile:hover {
+    opacity: .7;
+}
+
+.sidebar-toggler {
+    width: 35px;
+    height: 30px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-left: 20px;
+    display: none;
+}
+  
+.sidebar-toggler span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #353231;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.sidebar-toggler span:nth-child(1) {
+    top: 0px;
+}
+  
+.sidebar-toggler span:nth-child(2),.sidebar-toggler span:nth-child(3) {
+    top: 13px;
+}
+  
+.sidebar-toggler span:nth-child(4) {
+    top: 26px;
+}
+  
+.sidebar-toggler.active span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+  
+.sidebar-toggler.active span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+.sidebar-toggler.active span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+.sidebar-toggler.active span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+@media (max-width: 1700px) {
+    .sidebar-toggler {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .dashboard-header-left {
+        display: none;
+    }
+    .dashboard-header-right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 800px) {
+    .dashboard-header-search {
+        display: none;
+    }
+}
