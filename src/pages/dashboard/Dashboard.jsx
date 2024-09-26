@@ -5,7 +5,9 @@ import { Route, Routes } from 'react-router-dom'
 import HelpWidget from '../../components/helpWidget/HelpWidget'
 import DashboardHeader from '../../components/dashboardHeader/DashboardHeader'
 import DashboardHome from './Home/DashboardHome'
+import DashboardScore from './Score/DashboardScore'
 import DashboardFooter from '../../components/dashboardFooter/DashboardFooter'
+import ScoreShoot from './Score/ScoreShoot'
 
 const Dashboard = () => {
 
@@ -26,6 +28,8 @@ const Dashboard = () => {
 
             <Routes>
                 <Route path='home' element={<DashboardHome />} />
+                <Route path='score' element={<DashboardScore />} />
+                <Route path='score/scoreShoot' element={<ScoreShoot />} />
             </Routes>
 
             <DashboardFooter />

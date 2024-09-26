@@ -1,0 +1,40 @@
+[
+    {
+      "type": "Trap",
+      "variants": [
+        "American Trap",
+        "American Trap Doubles",
+        "Double Barrel",
+        "Double Rise",
+        "Down The Line",
+        "Olympic Double Trap",
+        "Olympic Trap",
+        "Single Barrel",
+        "Wobble Trap (ABT)"
+      ]
+    },
+    {
+      "type": "Skeet",
+      "variants": [
+        "American Skeet",
+        "English Skeet",
+        "Olympic Skeet (Pre-2012)",
+        "Olympic Skeet Final",
+        "Olympic Skeet",
+        "Skeet Doubles",
+        "Skeet Shoot-Off",
+        "Wobble Skeet"
+      ]
+    },
+    {
+      "type": "Sporting Clays",
+      "variants": [
+        "Compak Sporting",
+        "English Sporting",
+        "FITASC Sporting",
+        "Five Stand",
+        "Sportrap",
+        "Super Sporting"
+      ]
+    }
+]  

@@ -42,7 +42,7 @@
     color: #7C7471;
     font-size: 12px;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
     text-align: right;
 }
 

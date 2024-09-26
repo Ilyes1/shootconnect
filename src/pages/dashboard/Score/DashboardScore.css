@@ -1,0 +1,431 @@
+.event-card {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.event-card-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.event-date {
+    color: #67605E;
+    font-size: 14px;
+}
+
+.event-name {
+    color: #353231;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.event-club {
+    color: #353231;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.event-card-buttons a {
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: .3s;
+}
+
+.event-card-buttons a:hover {
+    filter: brightness(.77);
+}
+
+.event-card-buttons a img {
+    height: 14px;
+    margin-right: 7px;
+}
+
+.event-card-buttons a.edit-event-btn {
+    color: #4379F2;
+    background-color: #437af23f;
+}
+
+.event-card-buttons a.edit-shooters-btn {
+    color: #FF6A00;
+    background-color: #ff6a0043;
+}
+
+.event-card-buttons a.delete-event-btn {
+    color: #C7253E;
+    background-color: #c7253d3c;
+}
+
+.event-card-buttons a.score-shoot-btn {
+    color: #347928;
+    background-color: #3479283f;
+}
+
+.create-event-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.create-event-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.create-event-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #00000056;
+}
+
+.create-event-box {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    max-width: 90vw;
+    height: fit-content;
+    max-height: 90vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.create-event-title {
+    font-size: 25px;
+    color: #353231;
+    padding-bottom: 10px;
+}
+
+.create-event-field {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.create-event-field label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #67605E;
+}
+
+.create-event-input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #eee;
+    outline: none;
+    font-size: 15px;
+    color: #353231;
+    padding: 0 10px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.create-event-input:focus {
+    border-color: #FF6A00;
+}
+
+.create-event-dropdown-btn {
+    width: 100%;
+    height: 45px;
+    background: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    outline: none;
+    color: #67605E;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.create-event-dropdown-btn:focus {
+    border-color: #FF6A00;
+}
+
+.create-event-dropdown-btn img {
+    height: 20px;
+    transition: .3s;
+}
+
+.create-event-dropdown-btn:focus img {
+    transform: rotate(180deg);
+}
+
+.create-event-dropdown ul {
+    width: 100%;
+    max-height: 150px;
+    overflow-y: scroll;
+    border: 1px solid #eee;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.create-event-dropdown ul li {
+    width: 100%;
+    padding: 5px 10px;
+    transition: .3s;
+    border-radius: 4px;
+    color: #67605E;
+    font-size: 15px;
+}
+
+.create-event-dropdown ul li:hover {
+    color: #353231;
+    background-color: #ff6a0043;
+    cursor: pointer;
+}
+
+.create-event-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.create-event-btns button {
+    width: fit-content;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.create-event-btns button:hover {
+    filter: brightness(.77);
+}
+
+.create-event-btn-cancel {
+    background: none;
+    border: 1px solid #FF6A00;
+    color: #FF6A00;
+}
+
+.create-event-btn-confirm {
+    background-color: #FF6A00;
+    color: #fff;
+    border: 1px solid #FF6A00;
+}
+
+.selected-user-card {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin-top: 15px;
+}
+
+.selected-user-card-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.selected-user-card-heading h6 {
+    flex: 1;
+    font-size: 17px;
+}
+
+.selected-user-card-heading button {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: #c7253d3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    transition: .3s;
+}
+
+.selected-user-card-heading button:hover {
+    filter: brightness(.77);
+}
+
+.selected-user-card-heading button img {
+    height: 17px;
+}
+
+.selected-user-dropdown {
+    margin-top: 10px;
+}
+
+.selected-user-dropdown-btn {
+    background-color: #ff6a0043;
+    border-color: transparent;
+    height: 35px;
+}
+
+.scoring-sheet {
+    width: 100%;
+    height: calc(100vh - 285px);
+    overflow-y: scroll;
+}
+
+.shooter-container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.shooter-content {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.shooter-dragger img {
+    height: 25px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.shooter-container:hover .shooter-dragger img {
+    opacity: 1;
+}
+
+.shooter-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shooter-heading h5 {
+    margin-bottom: 5px;
+    font-size: 17px;
+    width: fit-content;
+}
+
+.shooter-cases {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+  
+.shooter-case {
+    flex: 1 0 calc((100% / 25) - 15px);
+    height: calc((100vw / 25) - 15px);
+    background: none;
+    border: 1px solid #FF6A00;
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shooter-case.selected {
+    border-width: 3px;
+    border-color: #353231;
+}
+
+.shooter-case.active {
+    background-color: #FF6A00;
+}
+
+.shooter-case img {
+    height: 70%;
+}
+
+.scoring-btns {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.scoring-btns button {
+    flex: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.scoring-btns button:hover {
+    filter: brightness(.9);
+}
+
+.scoring-btns button img {
+    height: 17px;
+    margin-right: 10px;
+}
+
+.scoring-miss-btn {
+    background-color: #eee;
+    color: #000;
+}
+
+.scoring-miss-btn img {
+    filter: invert(1);
+}
+
+.scoring-hit-btn {
+    color: #fff;
+    background-color: #FF6A00;
+}
+
+@media (max-width: 1700px) {
+    .shooter-case {
+        flex: 1 0 calc((100% / 25) - 7px);
+        height: calc((100vw / 25) - 7px);
+    }
+}
+
+@media (max-width: 550px) {
+    .shooter-cases {
+        gap: 2px;
+    }
+    .shooter-case {
+        flex: 1 0 calc((100% / 25) - 4px);
+        height: calc((100vw / 25) - 4px);
+        border-radius: 2px;
+    }
+    .shooter-case.selected {
+        border-width: 2px;
+    }
+    .shooter-container {
+        margin-top: 20px;
+    }
+    .shooter-dragger img {
+        height: 15px;
+    }
+    .shooter-content {
+        margin-left: 5px;
+    }
+}
